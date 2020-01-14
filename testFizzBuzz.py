@@ -1,19 +1,14 @@
 import unittest
 from FizzBuzz import FB
 
+x = [1, 3, 5, 15]
+y = [1, "Fizz", "Buzz", "FizzBuzz"]
+
 
 class testFB(unittest.TestCase):
-    def test_1(self):
-        self.assertEqual(1, FB(1))
-
-    def test_3(self):
-        self.assertEqual("Fizz", FB(3))
-
-    def test_5(self):
-        self.assertEqual("Buzz", FB(5))
-
-    def test_15(self):
-        self.assertEqual("FizzBuzz", FB(15))
+    def test_case(self):
+        for i in zip(x, y):
+            self.assertEqual(i[1], FB(i[0]))
 
 
 if __name__ == "__main__":
