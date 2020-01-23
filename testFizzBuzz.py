@@ -1,15 +1,8 @@
-import unittest
-from FizzBuzz import FB
-
-x = [1, 3, 5, 15]
-y = [1, "Fizz", "Buzz", "FizzBuzz"]
+def bf(n):
+    return 'fizzbuzz' if n % 15 == 0 else 'fizz' if n % 3 == 0 else 'buzz' if n % 5 == 0 else n
 
 
-class testFB(unittest.TestCase):
-    def test_case(self):
-        for i in zip(x, y):
-            self.assertEqual(i[1], FB(i[0]))
-
-
-if __name__ == "__main__":
-    unittest.main()
+assert bf(1) == 1
+assert bf(3) == 'fizz'
+assert bf(5) == 'buzz'
+assert bf(15) == 'fizzbuzz'
