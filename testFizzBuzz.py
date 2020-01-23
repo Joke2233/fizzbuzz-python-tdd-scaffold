@@ -1,5 +1,11 @@
 def bf(n):
-    return 'fizzbuzz' if n % 15 == 0 else 'fizz' if n % 3 == 0 else 'buzz' if n % 5 == 0 else n
+    if n % 15 == 0:
+        return 'fizzbuzz'
+    if n % 3 == 0:
+        return 'fizz'
+    if n % 5 == 0:
+        return 'buzz'
+    return n
 
 
 assert bf(1) == 1
